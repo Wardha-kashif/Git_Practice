@@ -1,0 +1,94 @@
+GIT NOTES:
+
+Go to the Folder and open the cmd 
+
+Start writing the following commands
+
+1.git init (project name)
+2.git status
+3.git add .
+4.git commit -m ""
+5.git remote add origin ""
+6.git push -u origin master
+origin--->Branch name
+
+
+Demo Publish Local Branch using Terminal
+
+1.git branch
+2.git status
+3.git checkout dev
+4.make the changes then git add
+5.Then same steps
+
+
+Merge a branch
+1.Checkout to master branch
+2.git merge branchname
+
+when you make changes dont push directly make a pull request
+
+if we clone the project we just do git push
+
+master is the production bracnch
+dev is for changes
+we created further sub branches of developer branch
+pull request tell that in which branch we have to merge the code
+
+Scenario:
+First make changes in your ev branch and then push this on github. after thsi just go the github and create pull request and select in which branch you have to change after that just add commit and create the pull request.
+
+--->After review you can close the pull request and add comment cannot merge.
+
+whatever we do changes on remote we do pull to get on local repository and whatever we do on local we push on github.
+
+How to Add new Developer on Repository
+
+We can also make restriction on branches by go on setting and select branches and add Restrictions. 
+
+
+Forking:
+When we don not have right of some repositories so we can fork that repo and make changes
+we can make changes and can make a pull request in that it is up to that person weather he accept or not.
+
+How to add more than one remote
+git remote add (anyname) eg upstream link
+
+
+Deleting a Branch:
+from Local:
+git branch -d branchname.
+
+from Remote:
+git branch -dr branchname.
+
+Completely delete from remote
+git push origin --delete branchname
+
+Git Revert:
+it does not delete the commit but it rever it make them as it was before but the commit are still in the log a sit create new commit and make changes in that.
+git revert <hashcode>
+
+Git Reset:
+
+git reset --hard <commit Hash>
+it will delete all the commit  after the hash
+
+git rest --keep <commit Hash>
+it will delete all the commit but keep it in the local
+
+after remove from terminal if you pull the commit the changes come again in our repo so we have to forcefully push
+git push -f origin master
+
+REBASE:
+Rebase is an alternative to merge.In maerging we combine the branches and it shows from where the branches come create a timeline but in merging it shows commit in a single line a they all are coming from the same branch.
+git rebase branchname
+Fast-Forward---->Simple maerge if change in any branch then other just do simple merging.
+In fast forward at a moment change in single branch.
+
+
+Merge Commit
+when there is change in both branches then merge coomit will use in this scenrio git will create one merge commit whee the diffference of both commit will put
+q+ enter ---->To come out of Terminal
+
+
